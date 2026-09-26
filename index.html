@@ -71,6 +71,169 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Android篇/【转载】termux使用SSH时主机标识更改的处理方法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/09/26/Android%E7%AF%87/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91termux%E4%BD%BF%E7%94%A8SSH%E6%97%B6%E4%B8%BB%E6%9C%BA%E6%A0%87%E8%AF%86%E6%9B%B4%E6%94%B9%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2026-09-26T13:54:33.184Z" itemprop="datePublished">2026-09-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>#termux<br>时间：2025年7月21日22点07分</p>
+<blockquote>
+<p>[!cite]-<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangguchao/article/details/85614914">问题解决——SSH时出现WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!-CSDN博客</a></p>
+</blockquote>
+<h2 id="1、问题描述"><a href="#1、问题描述" class="headerlink" title="1、问题描述"></a>1、问题描述</h2><p>终端出现：<br><code>WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</code></p>
+<h2 id="2、原因"><a href="#2、原因" class="headerlink" title="2、原因"></a>2、原因</h2><p>WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! <br>警告：远程主机标识已更改！</p>
+<p>此报错是由于远程的主机的公钥发生了变化导致的。 <br>ssh服务是通过公钥和私钥来进行连接的，它会把每个曾经访问过计算机或服务器的公钥（public key），记录在~&#x2F;.ssh&#x2F;known_hosts 中，当下次访问曾经访问过的计算机或服务器时，ssh就会核对公钥，如果和上次记录的不同，OpenSSH会发出警告。</p>
+<h2 id="3、解决"><a href="#3、解决" class="headerlink" title="3、解决"></a>3、解决</h2><p>使用命令清除所连接的IP：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -R XX.XX.XX.XX</span><br></pre></td></tr></table></figure>
+<p>重新连接：<br>输出：<br><code>Are you sure you want to continue connecting (yes/no)?</code><br>输入：<code>yes</code> 回车</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2026/09/26/Android%E7%AF%87/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91termux%E4%BD%BF%E7%94%A8SSH%E6%97%B6%E4%B8%BB%E6%9C%BA%E6%A0%87%E8%AF%86%E6%9B%B4%E6%94%B9%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/" data-id="cuidH9vbkLLQY2-DSDClZAzGF" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Android篇/【转载】apk安装失败 Failure INSTALL_FAILED_VERIFICATION_FAILURE Package Verification Result 解决方法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/09/26/Android%E7%AF%87/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91apk%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%20Failure%20INSTALL_FAILED_VERIFICATION_FAILURE%20Package%20Verification%20Result%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2026-09-26T13:54:33.182Z" itemprop="datePublished">2026-09-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>[!cite]-<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/mdsec/p/19045595">https://www.cnblogs.com/mdsec/p/19045595</a><br>发布于 2025-08-18 22:19</p>
+</blockquote>
+<p>Failure [INSTALL_FAILED_VERIFICATION_FAILURE: Package Verification Result]</p>
+<p>解决方法：<br>主要是因为验证安装包失败，将verifier_verify_adb_installs和global package_verifier_enable设置为0，禁用掉即可，命令如下：</p>
+<p>adb shell settings put global verifier_verify_adb_installs 0</p>
+<p>adb shell settings put global package_verifier_enable 0</p>
+<p>执行成功即可安装成功！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2026/09/26/Android%E7%AF%87/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91apk%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%20Failure%20INSTALL_FAILED_VERIFICATION_FAILURE%20Package%20Verification%20Result%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" data-id="cuid5cCpzeTOUGLdVo6sD2vOT" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Android篇/FCM推送问题和outlook邮件日历等" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/09/26/Android%E7%AF%87/FCM%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98%E5%92%8Coutlook%E9%82%AE%E4%BB%B6%E6%97%A5%E5%8E%86%E7%AD%89/" class="article-date">
+  <time class="dt-published" datetime="2026-09-26T13:54:33.180Z" itemprop="datePublished">2026-09-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>时间：2025年3月12日09点49分<br>#outlook #fcm #推送 #邮件 #日历</p>
+<p>备注：由于手机端往往因为过于个性化导致问题解决方法并不相同，故而本文只是提供当时我遇到的问题以及当时的解决办法，若本文的解决方法无效，属于正常情况，本篇只供参考。</p>
+<h1 id="mi13Pro配置FCM"><a href="#mi13Pro配置FCM" class="headerlink" title="mi13Pro配置FCM"></a>mi13Pro配置FCM</h1><h2 id="问题复现"><a href="#问题复现" class="headerlink" title="问题复现"></a>问题复现</h2><ul>
+<li>寻找一个统一邮箱的软件，将自己众多邮箱整合起来，发现outlook软件。</li>
+<li>登录邮箱，一切正常，代理正常，无法接受消息推送。</li>
+</ul>
+<h2 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h2><p>检索方式：via、酷安<br>结果：找到一个关于FCM配置的帖子，在这之前，找到的帖子没有具体的解决方式，都是聚在一起诉苦。</p>
+<p>帖子链接：<br><a target="_blank" rel="noopener" href="https://www.coolapk.com/feed/60731156?shareKey=NWM5M2Y1YzgzYmVjNjdkMDU5NDQ~&shareUid=29335331&shareFrom=com.coolapk.market_15.0.1">我是怎么在澎湃OS上搞定FCM的？ 来自 KMD4514886 - 酷安</a></p>
+<p>具体步骤：</p>
+<ol>
+<li>root手机是前提</li>
+<li>安装LSPosed模块fcmfix</li>
+<li>修改hosts文件，具体为添加几行代码</li>
+<li>测试fcm是否运行</li>
+<li>禁用fcm电池优化</li>
+</ol>
+<p>详细步骤扩展<br>3.<br>修改hosts文件，用mt管理器打开<code>/system/etc/</code> 目录，找到hosts并打开编辑<br>添加的代码如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">2404:6800:4008:c07::bc mtalk.google.com  </span><br><span class="line">2607:f8b0:4023:c0b::bc alt1-mtalk.google.com  </span><br><span class="line">2607:f8b0:4023:1::bc alt5-mtalk.google.com  </span><br><span class="line">2607:f8b0:4002:c03::bc alt7-mtalk.google.com  </span><br><span class="line">108.177.125.188 mtalk.google.com  </span><br><span class="line">3.3.3.3 alt1-mtalk.google.com  </span><br><span class="line">3.3.3.3 alt2-mtalk.google.com  </span><br><span class="line">74.125.200.188 alt3-mtalk.google.com  </span><br><span class="line">74.125.200.188 alt4-mtalk.google.com  </span><br><span class="line">3.3.3.3 alt5-mtalk.google.com  </span><br><span class="line">3.3.3.3 alt6-mtalk.google.com  </span><br><span class="line">74.125.200.188 alt7-mtalk.google.com  </span><br><span class="line">3.3.3.3 alt8-mtalk.google.com</span><br></pre></td></tr></table></figure>
+<p>如果需要微信推送还得添加几个</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">short.weixin.qq.com</span><br><span class="line">dns.weixin.qq.com.cn</span><br><span class="line">long.weixin.qq.com</span><br></pre></td></tr></table></figure>
+<p>配置代码图：<br><img src="/../../Resources/Images/Android%E7%AF%87/FCM%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98%E5%92%8Coutlook%E9%82%AE%E4%BB%B6%E6%97%A5%E5%8E%86%E7%AD%89_20250312.png" alt="fcm配置代码图"><br>打开fcm诊断（root了直接通过fcmfix打开，没root拨号盘输入 <em>#</em>#426#<em>#</em> 打开）<br>有root的记得把fcmfix加入自启动并电池无限制<br>点event查看是否推送（建议谷歌商店下载Outlook，然后发个邮件过来看看有没有推送）</p>
+<h1 id="配置outlook"><a href="#配置outlook" class="headerlink" title="配置outlook"></a>配置outlook</h1><p>outlook的推送问题我并没有解决，我的vpn一直开着，配置好fcm之后并没有对outlook邮件进行测试，可能成功了，因为在outlook挂后台的时候有邮件推送，但是没有后台的情况并没有尝试过。</p>
+<p>在整个测试过程中，用数据备份软件(需要root)，备份了最初版本，恢复了数次，因为outlook有不同的版本，有ms官网下载的中国区版本，有小米应用商店下载的版本，有Google play下载的版本。本人使用的是Google play下载的版本。</p>
+<p>配置的时候，测试消息推送提示未安装Google play服务，当时纠结万分，现在直接忽视。</p>
+<p>关于日历的配置，主要是同步本地小米日历，在账号上添加本地目录即可。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2026/09/26/Android%E7%AF%87/FCM%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98%E5%92%8Coutlook%E9%82%AE%E4%BB%B6%E6%97%A5%E5%8E%86%E7%AD%89/" data-id="cuid28nr14vExjgMcPaIBwZp-" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Android篇/fastboot驱动问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/09/26/Android%E7%AF%87/fastboot%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2026-09-26T13:54:33.178Z" itemprop="datePublished">2026-09-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>近日准备将旧手机恢复出厂设置，虽然面具没有掉，但是还是需要重新刷入magisk patch，于是从zeroTermux提取到了<code>boot_b.img</code>，之后用magisk打包，准备刷入，进入fastboot时，却查找不到设备，网上搜罗一圈，估计是驱动没有正确安装。</p>
+<p>以下为本次fastboot驱动问题解决方法。</p>
+<ol>
+<li>在进入fastboot后（不进入好像不行，具体不记得了），Windows设备管理器的<code>其他设备</code>会多出来一个未知设备，可能时Android设备，但是也有可能是其他东西，反正对比接入设备前多出来的那一个就是手机的设备。</li>
+<li>更新设备：让我从计算机上的可用驱动程序中选取（笔者在此之前安装完毕Android的驱动，不确定名称，不出意外的话，搜索adb驱动，或者名为DPInst）<img src="/../../Resources/Images/Android%E7%AF%87/fastboot%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98_20250923.png"></li>
+<li>在图示窗口中，选择<code>Android Bootloader Interface</code><img src="/../../Resources/Images/Android%E7%AF%87/1-fastboot%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98_20250923.png"></li>
+<li>完毕，命令窗口输入<code>fastboot devices</code>检测</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2026/09/26/Android%E7%AF%87/fastboot%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98/" data-id="cuidyASV3KFlJIvJ6ClBRUk_5" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2026/09/26/hello-world/" class="article-date">
@@ -110,7 +273,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2026/09/26/hello-world/" data-id="cuid_yjDCOfGLg2PDg6ObH5Tt" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2026/09/26/hello-world/" data-id="cuidoIAvEW5LZsVfA3LwfpHW3" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -151,6 +314,22 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2026/09/26/Android%E7%AF%87/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91termux%E4%BD%BF%E7%94%A8SSH%E6%97%B6%E4%B8%BB%E6%9C%BA%E6%A0%87%E8%AF%86%E6%9B%B4%E6%94%B9%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/26/Android%E7%AF%87/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91apk%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%20Failure%20INSTALL_FAILED_VERIFICATION_FAILURE%20Package%20Verification%20Result%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/26/Android%E7%AF%87/FCM%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98%E5%92%8Coutlook%E9%82%AE%E4%BB%B6%E6%97%A5%E5%8E%86%E7%AD%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/26/Android%E7%AF%87/fastboot%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2026/09/26/hello-world/">Hello World</a>

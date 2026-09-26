@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="时间：2025年3月12日09点49分#outlook #fcm #推送 #邮件 #日历 备注：由于手机端往往因为过于个性化导致问题解决方法并不相同，故而本文只是提供当时我遇到的问题以及当时的解决办法，若本文的解决方法无效，属于正常情况，本篇只供参考。 mi13Pro配置FCM问题复现 寻找一个统一邮箱的软件，将自己众多邮箱整合起来，发现outlook软件。 登录邮箱，一切正常，代理正常，无法接受">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2026/09/26/Android%E7%AF%87/FCM%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98%E5%92%8Coutlook%E9%82%AE%E4%BB%B6%E6%97%A5%E5%8E%86%E7%AD%89/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="时间：2025年3月12日09点49分#outlook #fcm #推送 #邮件 #日历 备注：由于手机端往往因为过于个性化导致问题解决方法并不相同，故而本文只是提供当时我遇到的问题以及当时的解决办法，若本文的解决方法无效，属于正常情况，本篇只供参考。 mi13Pro配置FCM问题复现 寻找一个统一邮箱的软件，将自己众多邮箱整合起来，发现outlook软件。 登录邮箱，一切正常，代理正常，无法接受">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/Resources/Images/Android%E7%AF%87/FCM%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98%E5%92%8Coutlook%E9%82%AE%E4%BB%B6%E6%97%A5%E5%8E%86%E7%AD%89_20250312.png">
+<meta property="article:published_time" content="2026-09-26T13:54:33.180Z">
+<meta property="article:modified_time" content="2025-11-15T08:52:48.000Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/Resources/Images/Android%E7%AF%87/FCM%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98%E5%92%8Coutlook%E9%82%AE%E4%BB%B6%E6%97%A5%E5%8E%86%E7%AD%89_20250312.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Android篇/FCM推送问题和outlook邮件日历等" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/09/26/Android%E7%AF%87/FCM%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98%E5%92%8Coutlook%E9%82%AE%E4%BB%B6%E6%97%A5%E5%8E%86%E7%AD%89/" class="article-date">
+  <time class="dt-published" datetime="2026-09-26T13:54:33.180Z" itemprop="datePublished">2026-09-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>时间：2025年3月12日09点49分<br>#outlook #fcm #推送 #邮件 #日历</p>
+<p>备注：由于手机端往往因为过于个性化导致问题解决方法并不相同，故而本文只是提供当时我遇到的问题以及当时的解决办法，若本文的解决方法无效，属于正常情况，本篇只供参考。</p>
+<h1 id="mi13Pro配置FCM"><a href="#mi13Pro配置FCM" class="headerlink" title="mi13Pro配置FCM"></a>mi13Pro配置FCM</h1><h2 id="问题复现"><a href="#问题复现" class="headerlink" title="问题复现"></a>问题复现</h2><ul>
+<li>寻找一个统一邮箱的软件，将自己众多邮箱整合起来，发现outlook软件。</li>
+<li>登录邮箱，一切正常，代理正常，无法接受消息推送。</li>
+</ul>
+<h2 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h2><p>检索方式：via、酷安<br>结果：找到一个关于FCM配置的帖子，在这之前，找到的帖子没有具体的解决方式，都是聚在一起诉苦。</p>
+<p>帖子链接：<br><a target="_blank" rel="noopener" href="https://www.coolapk.com/feed/60731156?shareKey=NWM5M2Y1YzgzYmVjNjdkMDU5NDQ~&shareUid=29335331&shareFrom=com.coolapk.market_15.0.1">我是怎么在澎湃OS上搞定FCM的？ 来自 KMD4514886 - 酷安</a></p>
+<p>具体步骤：</p>
+<ol>
+<li>root手机是前提</li>
+<li>安装LSPosed模块fcmfix</li>
+<li>修改hosts文件，具体为添加几行代码</li>
+<li>测试fcm是否运行</li>
+<li>禁用fcm电池优化</li>
+</ol>
+<p>详细步骤扩展<br>3.<br>修改hosts文件，用mt管理器打开<code>/system/etc/</code> 目录，找到hosts并打开编辑<br>添加的代码如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">2404:6800:4008:c07::bc mtalk.google.com  </span><br><span class="line">2607:f8b0:4023:c0b::bc alt1-mtalk.google.com  </span><br><span class="line">2607:f8b0:4023:1::bc alt5-mtalk.google.com  </span><br><span class="line">2607:f8b0:4002:c03::bc alt7-mtalk.google.com  </span><br><span class="line">108.177.125.188 mtalk.google.com  </span><br><span class="line">3.3.3.3 alt1-mtalk.google.com  </span><br><span class="line">3.3.3.3 alt2-mtalk.google.com  </span><br><span class="line">74.125.200.188 alt3-mtalk.google.com  </span><br><span class="line">74.125.200.188 alt4-mtalk.google.com  </span><br><span class="line">3.3.3.3 alt5-mtalk.google.com  </span><br><span class="line">3.3.3.3 alt6-mtalk.google.com  </span><br><span class="line">74.125.200.188 alt7-mtalk.google.com  </span><br><span class="line">3.3.3.3 alt8-mtalk.google.com</span><br></pre></td></tr></table></figure>
+<p>如果需要微信推送还得添加几个</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">short.weixin.qq.com</span><br><span class="line">dns.weixin.qq.com.cn</span><br><span class="line">long.weixin.qq.com</span><br></pre></td></tr></table></figure>
+<p>配置代码图：<br><img src="/../../Resources/Images/Android%E7%AF%87/FCM%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98%E5%92%8Coutlook%E9%82%AE%E4%BB%B6%E6%97%A5%E5%8E%86%E7%AD%89_20250312.png" alt="fcm配置代码图"><br>打开fcm诊断（root了直接通过fcmfix打开，没root拨号盘输入 <em>#</em>#426#<em>#</em> 打开）<br>有root的记得把fcmfix加入自启动并电池无限制<br>点event查看是否推送（建议谷歌商店下载Outlook，然后发个邮件过来看看有没有推送）</p>
+<h1 id="配置outlook"><a href="#配置outlook" class="headerlink" title="配置outlook"></a>配置outlook</h1><p>outlook的推送问题我并没有解决，我的vpn一直开着，配置好fcm之后并没有对outlook邮件进行测试，可能成功了，因为在outlook挂后台的时候有邮件推送，但是没有后台的情况并没有尝试过。</p>
+<p>在整个测试过程中，用数据备份软件(需要root)，备份了最初版本，恢复了数次，因为outlook有不同的版本，有ms官网下载的中国区版本，有小米应用商店下载的版本，有Google play下载的版本。本人使用的是Google play下载的版本。</p>
+<p>配置的时候，测试消息推送提示未安装Google play服务，当时纠结万分，现在直接忽视。</p>
+<p>关于日历的配置，主要是同步本地小米日历，在账号上添加本地目录即可。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2026/09/26/Android%E7%AF%87/FCM%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98%E5%92%8Coutlook%E9%82%AE%E4%BB%B6%E6%97%A5%E5%8E%86%E7%AD%89/" data-id="cuid28nr14vExjgMcPaIBwZp-" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2026/09/26/Android%E7%AF%87/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91apk%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%20Failure%20INSTALL_FAILED_VERIFICATION_FAILURE%20Package%20Verification%20Result%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/09/26/Android%E7%AF%87/fastboot%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/09/">September 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/09/26/Android%E7%AF%87/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91termux%E4%BD%BF%E7%94%A8SSH%E6%97%B6%E4%B8%BB%E6%9C%BA%E6%A0%87%E8%AF%86%E6%9B%B4%E6%94%B9%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/26/Android%E7%AF%87/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91apk%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%20Failure%20INSTALL_FAILED_VERIFICATION_FAILURE%20Package%20Verification%20Result%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/26/Android%E7%AF%87/FCM%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98%E5%92%8Coutlook%E9%82%AE%E4%BB%B6%E6%97%A5%E5%8E%86%E7%AD%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/26/Android%E7%AF%87/fastboot%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/26/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
